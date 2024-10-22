@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #588157;
+  --secondary-color: #a3b18a;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+body {
+  font-family: "Caveat Brush", "Times New Roman", sans-serif;
+  height: 100vh;
+  color: #132a13;
+  background-color: var(--secondary-color);
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.start-btn {
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  border: 3px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.board div,
+.cell-btn {
+  width: 150px;
+  height: 150px;
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+dialog {
+  max-width: 600px;
+  border: none;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.submit-btn,
+.close-btn {
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+}
+
+.close-btn {
+  background-color: red;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.75;
+}
+
+.player-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.player-form input {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
